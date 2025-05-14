@@ -1,0 +1,56 @@
+<!--
+  This HTML file is part of the Online Library frontend.
+  It includes Bootstrap styling, background image, and JavaScript logic for user interaction.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Transaction</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+<style>
+  body {
+    background: url('library-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+  .animated-border {
+    border: 3px solid transparent;
+    border-image: linear-gradient(45deg, #ff416c, #ff4b2b) 1;
+    animation: borderAnimation 2s infinite alternate;
+  }
+  @keyframes borderAnimation {
+    0% { border-image: linear-gradient(45deg, #ff416c, #ff4b2b) 1; }
+    100% { border-image: linear-gradient(45deg, #4b2bff, #41cfff) 1; }
+  }
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Library</a>
+</nav>
+
+<div class="container mt-5">
+  <div class="animated-border p-4 bg-light rounded">
+    <h3 class="text-center">Reserve or Return Books</h3>
+    <form>
+      <div class="form-group">
+        <label>Book ISBN</label>
+        <input type="text" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label>Action</label>
+        <select class="form-control">
+          <option value="reserve">Reserve</option>
+          <option value="return">Return</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

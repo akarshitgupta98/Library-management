@@ -1,0 +1,45 @@
+<!--
+  This HTML file is part of the Online Library frontend.
+  It includes Bootstrap styling, background image, and JavaScript logic for user interaction.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Info</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+<style>
+  body {
+    background: url('library-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+  .animated-border {
+    border: 3px solid transparent;
+    border-image: linear-gradient(45deg, #ff416c, #ff4b2b) 1;
+    animation: borderAnimation 2s infinite alternate;
+  }
+  @keyframes borderAnimation {
+    0% { border-image: linear-gradient(45deg, #ff416c, #ff4b2b) 1; }
+    100% { border-image: linear-gradient(45deg, #4b2bff, #41cfff) 1; }
+  }
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">Library</a>
+</nav>
+
+<div class="container mt-5 text-white">
+  <div class="animated-border p-4 bg-dark rounded">
+    <h2>Library Information</h2>
+    <p><strong>Name:</strong> Central Digital Library</p>
+    <p><strong>Address:</strong> 123 Library Lane, Booktown</p>
+    <p><strong>Email:</strong> support@digitallibrary.com</p>
+  </div>
+</div>
+</body>
+</html>

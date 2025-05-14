@@ -1,0 +1,68 @@
+<!--
+  This HTML file is part of the Online Library frontend.
+  It includes Bootstrap styling, background image, and JavaScript logic for user interaction.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Library Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background: url('library-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .login-box {
+      margin-top: 100px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5 login-box">
+      <h3 class="text-center">Library Login</h3>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" required>
+        </div>
+        <div class="form-group">
+          <label for="userType">Login as:</label>
+          <select class="form-control" id="userType" required>
+            <option value="">Select</option>
+            <option value="admin">Admin</option>
+            <option value="student">Student</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+        <a href="register.html" class="btn btn-link btn-block">Create Account</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const userType = document.getElementById('userType').value;
+    if (userType === 'admin') {
+      window.location.href = 'admin_dashboard.html';
+    } else if (userType === 'student') {
+      window.location.href = 'student_dashboard.html';
+    } else {
+      alert('Please select a user type.');
+    }
+  });
+</script>
+</body>
+</html>

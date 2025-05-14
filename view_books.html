@@ -1,0 +1,51 @@
+<!--
+  This HTML file is part of the Online Library frontend.
+  It includes Bootstrap styling, background image, and JavaScript logic for user interaction.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Books</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+<style>
+  body {
+    background: url('library-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+  .animated-border {
+    border: 3px solid transparent;
+    border-image: linear-gradient(45deg, #ff416c, #ff4b2b) 1;
+    animation: borderAnimation 2s infinite alternate;
+  }
+  @keyframes borderAnimation {
+    0% { border-image: linear-gradient(45deg, #ff416c, #ff4b2b) 1; }
+    100% { border-image: linear-gradient(45deg, #4b2bff, #41cfff) 1; }
+  }
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Library</a>
+</nav>
+
+<div class="container mt-5">
+  <div class="animated-border p-4 bg-light rounded">
+    <h3 class="text-center">Book List</h3>
+    <table class="table table-bordered table-striped bg-white">
+      <thead>
+        <tr><th>Title</th><th>Author</th><th>Genre</th><th>ISBN</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sample Book</td><td>John Doe</td><td>Fiction</td><td>123456789</td></tr>
+        <!-- More sample rows -->
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
